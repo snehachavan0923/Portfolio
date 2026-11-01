@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha Chavan | Full-Stack Developer</title>
+
+  <meta name="description"
+    content="Official developer portfolio of Sneha Chavan — Computer Science and Engineering student at RV College of Engineering, Bengaluru. Full-Stack Developer, Backend Systems Enthusiast, and SaaS Builder specializing in Java, Spring Boot, React.js, and modern web architectures." />
+  <meta name="keywords"
+    content="Sneha Chavan, Full-Stack Developer, RVCE, RV College of Engineering, Spring Boot, Java, React.js, SaaS, Backend Engineering, Bengaluru, Portfolio" />
+  <meta name="author" content="Sneha Chavan" />
+  <meta name="theme-color" content="#08090D" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sneha Chavan | Full-Stack Developer" />
+  <meta property="og:description"
+    content="Building secure backend systems, intuitive interfaces, and scalable full-stack applications. CSE at RV College of Engineering." />
+  <meta property="og:url" content="https://github.com/snehachavan0923" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+
+<body class="bg-[#08090D] text-[#F5F5F7] antialiased selection:bg-[#8B5CF6]/30 selection:text-white">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#8B5CF6] focus:text-white focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- Ambient Decorative Background Lights (Strictly clipped in fixed container to eliminate horizontal scroll) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="ambient-glow glow-violet w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] -top-32 -left-32"></div>
+    <div class="ambient-glow glow-cyan w-[400px] sm:w-[650px] h-[400px] sm:h-[650px] top-[40vh] -right-48"></div>
+    <div class="ambient-glow glow-violet w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] top-[140vh] -left-48"></div>
+    <div class="ambient-glow glow-cyan w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] top-[260vh] -right-32"></div>
+  </div>
+
+  <!-- FIXED NAVIGATION BAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 py-4 sm:py-5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+
+        <!-- Brand Wordmark -->
+        <a href="#hero" class="flex items-center gap-2 group interactive-hover"
+          aria-label="Sneha Chavan Portfolio Home">
+          <span
+            class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#38BDF8] shadow-sm shadow-[#8B5CF6]/50 group-hover:scale-125 transition-transform"></span>
+          <span
+            class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-[#38BDF8] transition-colors">
+            SNEHA CHAVAN
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav id="nav-links"
+          class="hidden xl:flex items-center gap-1 bg-[#101219]/80 border border-white/5 rounded-full px-3.5 py-1.5 backdrop-blur-md shadow-lg"
+          aria-label="Main Navigation">
+          <!-- Populated by navigation.js -->
+        </nav>
+
+        <!-- CTAs & Mobile Menu Toggle -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+            class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-white text-xs font-semibold border border-white/10 transition-all interactive-hover"
+            title="Download Resume PDF">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-[#38BDF8]"></i>
+            <span>Resume</span>
+          </a>
+
+          <a href="#contact"
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] hover:from-[#7C3AED] hover:to-[#4F46E5] text-white text-xs font-semibold shadow-md shadow-[#8B5CF6]/20 transition-all magnetic-cta interactive-hover">
+            <span>Let's Connect</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-toggle" type="button"
+            class="xl:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+            aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay & Drawer -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+  </div>
+  <div id="mobile-menu-drawer"
+    class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#0c0e14] border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full invisible transition-all duration-300 ease-out xl:hidden shadow-2xl overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-white/10">
+        <span class="font-display font-bold text-sm tracking-wider text-white">SNEHA CHAVAN</span>
+        <button id="mobile-menu-close" class="p-2 rounded-lg bg-white/5 text-[#A0A3AD] hover:text-white"
+          aria-label="Close menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav id="mobile-nav-links" class="flex flex-col gap-1 mt-5">
+        <!-- Populated by navigation.js -->
+      </nav>
+    </div>
+
+    <div class="pt-5 border-t border-white/10 space-y-3">
+      <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono font-semibold">
+        <i data-lucide="download" class="w-4 h-4 text-[#38BDF8]"></i>
+        <span>Download Resume (PDF)</span>
+      </a>
+
+      <a href="#contact"
+        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#8B5CF6] text-white text-xs font-semibold">
+        <span>Let's Connect</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+
+      <span class="text-[11px] text-[#A0A3AD] block text-center font-mono">
+        Bengaluru, Karnataka, India
+      </span>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section id="hero"
+      class="relative min-h-screen flex items-center pt-28 pb-16 lg:py-0 overflow-hidden bg-grid-pattern">
+
+      <!-- Three.js 3D Interactive Canvas Container (Non-blocking touch scrolling) -->
+      <div id="hero-canvas-container" aria-hidden="true">
+        <!-- WebGL Fallback container in case 3D is not supported -->
+        <div class="webgl-fallback"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+          <div class="lg:col-span-8 space-y-5 sm:space-y-6 text-left">
+
+            <!-- Eyebrow Badge -->
+            <div id="hero-eyebrow"
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 text-[10px] sm:text-xs font-mono text-[#A78BFA] backdrop-blur-md max-w-full flex-wrap">
+              <span class="w-2 h-2 rounded-full bg-[#38BDF8] animate-ping"></span>
+              <span>COMPUTER SCIENCE &amp; ENGINEERING · RVCE</span>
+            </div>
+
+            <!-- Main Headline with Fluid Clamp Typography -->
+            <h1 id="hero-headline" class="font-display text-fluid-hero font-extrabold tracking-tight text-white">
+              Building Digital <br class="hidden sm:inline" />
+              <span class="gradient-text-violet">Experiences.</span>
+            </h1>
+
+            <!-- Animated Role Ticker -->
+            <div id="hero-roles-container"
+              class="flex flex-wrap items-center gap-2 sm:gap-3 text-base sm:text-2xl font-mono text-[#38BDF8]">
+              <span class="text-[#A0A3AD] text-xs sm:text-base font-normal">Specializing in:</span>
+              <div class="bg-[#12141e]/90 px-3 py-1 rounded-lg border border-[#38BDF8]/25 shadow-inner">
+                <span id="hero-animated-role" class="font-semibold text-white">Full-Stack Developer</span>
+              </div>
+            </div>
+
+            <!-- Supporting Introduction -->
+            <p id="hero-intro" class="text-fluid-sub text-[#A0A3AD] max-w-2xl leading-relaxed">
+              I'm <strong class="text-white font-medium">Sneha Chavan</strong>, a Computer Science and Engineering
+              student at RV College of Engineering, passionate about building secure backend systems, intuitive
+              interfaces, and scalable full-stack applications.
+            </p>
+
+            <!-- Action CTAs: Explore My Work, Download Resume, Let's Connect -->
+            <div id="hero-ctas" class="flex flex-wrap items-center gap-2.5 sm:gap-4 pt-3">
+              <a href="#projects"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] hover:from-[#7C3AED] hover:to-[#4F46E5] text-white text-xs sm:text-sm font-semibold shadow-xl shadow-purple-500/20 transition-all magnetic-cta interactive-hover">
+                <span>Explore My Work</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+
+              <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs sm:text-sm font-semibold transition-all interactive-hover"
+                title="Download Resume PDF">
+                <i data-lucide="download" class="w-4 h-4 text-[#38BDF8]"></i>
+                <span>Download Resume</span>
+              </a>
+
+              <a href="#contact"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 text-xs sm:text-sm font-semibold transition-all interactive-hover">
+                <i data-lucide="mail" class="w-4 h-4 text-[#A78BFA]"></i>
+                <span>Let's Connect</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div id="hero-scroll-indicator"
+        class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 text-[11px] font-mono text-[#A0A3AD] opacity-75">
+        <span>SCROLL TO DISCOVER</span>
+        <div class="w-4 h-8 rounded-full border border-white/20 flex items-start justify-center p-1">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] animate-bounce"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="py-20 lg:py-28 relative border-t border-white/5 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] font-semibold block mb-2">
+            01 / BIOGRAPHY &amp; CORE FOCUS
+          </span>
+          <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+            Beyond the Code.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+          <!-- Editorial Biography Text -->
+          <div id="about-bio-left" class="lg:col-span-7 space-y-5 text-[#A0A3AD] text-sm sm:text-base leading-relaxed">
+            <p>
+              I'm a Computer Science and Engineering student at RV College of Engineering, with a strong focus on
+              full-stack development and modern web technologies.
+            </p>
+            <p>
+              My experience includes building responsive frontend modules, developing secure backend services, designing
+              REST APIs, managing databases, and integrating third-party services into SaaS applications.
+            </p>
+            <p>
+              I enjoy creating intuitive user interfaces, engineering reliable backend systems, and solving practical
+              software development challenges. I'm particularly interested in software architecture, authentication
+              systems, database management, and building useful digital products.
+            </p>
+            <p class="text-white font-medium">
+              I'm always eager to learn, collaborate, and connect with professionals in the software development
+              community.
+            </p>
+
+            <div class="pt-3 flex flex-wrap gap-2.5">
+              <span
+                class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#38BDF8]"></i>
+                Bengaluru, Karnataka, India
+              </span>
+              <span
+                class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white">
+                <i data-lucide="book-open" class="w-3.5 h-3.5 text-[#8B5CF6]"></i>
+                RVCE CSE · B.E. Degree
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Glassmorphic Stats & Status Card -->
+          <div id="about-card-right" class="lg:col-span-5">
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 relative shadow-2xl space-y-5">
+
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-xs font-mono text-emerald-400 font-semibold uppercase tracking-wider">
+                    Current Academic Status
+                  </span>
+                </div>
+                <span class="text-xs text-[#A0A3AD] font-mono">RVCE Bengaluru</span>
+              </div>
+
+              <!-- Highlights Grid -->
+              <div class="space-y-3.5">
+                <div
+                  class="bg-[#0f1118] p-4 sm:p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                  <span class="text-xs font-mono text-[#A0A3AD] uppercase block mb-1 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]"></span>
+                    Full-Stack Specialty
+                  </span>
+                  <span class="text-sm sm:text-base font-semibold text-white block">Java Spring Boot + React.js</span>
+                  <span class="text-xs text-[#A0A3AD] block mt-1">REST APIs, JWT &amp; RBAC Architecture</span>
+                </div>
+
+                <div
+                  class="bg-[#0f1118] p-4 sm:p-5 rounded-2xl border border-white/5 hover:border-white/10 transition-colors">
+                  <span class="text-xs font-mono text-[#A0A3AD] uppercase block mb-1 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8]"></span>
+                    Production Integrations
+                  </span>
+                  <span class="text-sm sm:text-base font-semibold text-white block">Cloudinary · LocationIQ </span>
+                  <span class="text-xs text-[#A0A3AD] block mt-1">Media pipelines, geolocation mapping </span>
+                </div>
+              </div>
+
+              <!-- Prominent Resume Action Buttons -->
+              <div class="pt-2 flex flex-wrap sm:flex-nowrap items-center gap-2.5">
+                <a href="/assets/Sneha_Chavan_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                  class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#8B5CF6] via-[#7C3AED] to-[#6366F1] hover:from-[#7C3AED] hover:to-[#4F46E5] text-white text-xs sm:text-sm font-semibold shadow-lg shadow-purple-500/25 transition-all magnetic-cta interactive-hover group">
+                  <i data-lucide="file-text"
+                    class="w-4 h-4 text-[#38BDF8] group-hover:scale-110 transition-transform"></i>
+                  <span>View Resume</span>
+                  <span
+                    class="text-xs opacity-80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                </a>
+
+                <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+                  class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-[#A0A3AD] hover:text-white transition-all interactive-hover"
+                  title="Download Resume PDF">
+                  <i data-lucide="download" class="w-4 h-4 text-[#A78BFA]"></i>
+                  <span>Download PDF</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="py-20 lg:py-28 relative border-t border-white/5 bg-[#0a0c12]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#38BDF8] font-semibold block mb-2">
+            02 / TECHNICAL COMPETENCIES
+          </span>
+          <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+            Technical Skills.
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A3AD] mt-2.5 max-w-2xl">
+            A comprehensive, verified inventory of programming languages, frameworks, backend architectures, databases,
+            and enterprise tooling.
+          </p>
+        </div>
+
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          <!-- Populated by main.js from skillsData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 lg:py-28 relative border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] font-semibold block mb-2">
+            03 / INDUSTRY EXPERIENCE
+          </span>
+          <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+            Work Experience.
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A3AD] mt-2.5 max-w-2xl">
+            Practical software engineering internship delivering production modules in Agile sprints.
+          </p>
+        </div>
+
+        <div class="relative pl-5 sm:pl-8 border-l border-white/10">
+          <div id="experience-timeline-line"
+            class="absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#8B5CF6] via-[#38BDF8] to-transparent">
+          </div>
+
+          <div id="experience-timeline-content">
+            <!-- Populated by main.js from experienceData -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-20 lg:py-28 relative border-t border-white/5 bg-[#0a0c12]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-[#38BDF8] font-semibold block mb-2">
+                04 / SELECTED WORK
+              </span>
+              <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+                Featured Projects.
+              </h2>
+            </div>
+            <p class="text-xs font-mono text-[#A0A3AD]">
+              Click any project for architectural deep-dives &amp; workflows.
+            </p>
+          </div>
+        </div>
+
+        <div id="projects-grid">
+          <!-- Populated by projects.js with custom interactive mockups -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 lg:py-28 relative border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] font-semibold block mb-2">
+            05 / ACADEMIC BACKGROUND
+          </span>
+          <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+            Education.
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A3AD] mt-2.5 max-w-2xl">
+            Current B.E. program at RV College of Engineering and foundational diploma &amp; school record.
+          </p>
+        </div>
+
+        <div id="education-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by main.js from educationData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="py-20 lg:py-28 relative border-t border-white/5 bg-[#0a0c12]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="section-heading-group mb-12 sm:mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#38BDF8] font-semibold block mb-2">
+            06 / CREDENTIALS &amp; TRAINING
+          </span>
+          <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+            Certifications.
+          </h2>
+          <p class="text-sm sm:text-base text-[#A0A3AD] mt-2.5 max-w-2xl">
+            Technical course topics completed through recognized industry training programs.
+          </p>
+        </div>
+
+        <div id="certifications-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Populated by main.js from certificationsData -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESUME DOWNLOAD SECTION -->
+    <section id="resume" class="py-20 lg:py-28 relative border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div
+          class="glass-panel rounded-3xl p-5 sm:p-8 lg:p-12 border border-white/10 relative overflow-hidden shadow-2xl">
+          <!-- Ambient gradient flare -->
+          <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#8B5CF6]/15 rounded-full blur-3xl pointer-events-none">
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="lg:col-span-8 space-y-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono uppercase tracking-widest text-[#A78BFA] font-semibold">
+                  07 / CURRICULUM VITAE
+                </span>
+                <span
+                  class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                  UPDATED OCTOBER 2026
+                </span>
+              </div>
+
+              <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+                Download Resume PDF.
+              </h2>
+
+              <p class="text-sm sm:text-base text-[#A0A3AD] leading-relaxed max-w-2xl">
+                My complete ATS-friendly resume covers my current B.E. at RV College of Engineering, industry internship
+                experience at Fourise Software Solutions, SaaS project architectures (PGMate.in, PRISM, BugFlow), and
+                comprehensive technical skills.
+              </p>
+
+              <!-- Highlights Badges -->
+              <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-[#0f1118] border border-white/10 text-white">
+                  ✓ RV College of Engineering (B.E. CSE)
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-[#0f1118] border border-white/10 text-white">
+                  ✓ Diploma CGPA: 9.97 / 10
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-[#0f1118] border border-white/10 text-white">
+                  ✓ Java Spring Boot + React.js
+                </span>
+                <span class="px-2.5 py-1 rounded-md bg-[#0f1118] border border-white/10 text-white">
+                  ✓ Bengaluru, Karnataka, India
+                </span>
+              </div>
+            </div>
+
+            <!-- Direct Action Download Buttons -->
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
+              <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+                class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#8B5CF6] via-[#7C3AED] to-[#6366F1] hover:from-[#7C3AED] hover:to-[#4F46E5] text-white text-sm font-semibold shadow-xl shadow-purple-500/25 transition-all magnetic-cta interactive-hover">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Download Resume (PDF)</span>
+              </a>
+
+              <a href="/assets/Sneha_Chavan_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-white transition-all interactive-hover">
+                <i data-lucide="file-text" class="w-4 h-4 text-[#38BDF8]"></i>
+                <span>Open PDF in New Tab ↗</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 lg:py-28 relative border-t border-white/5 overflow-hidden">
+
+      <!-- Subtle ambient glow -->
+      <div
+        class="ambient-glow glow-violet w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div id="contact-content"
+          class="glass-panel rounded-3xl p-5 sm:p-8 lg:p-12 border border-white/10 shadow-2xl relative">
+
+          <div class="max-w-3xl mx-auto text-center space-y-4 mb-10">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#A78BFA] font-semibold block">
+              08 / GET IN TOUCH
+            </span>
+            <h2 class="font-display text-fluid-h2 font-extrabold text-white tracking-tight">
+              Let's Build Something Meaningful.
+            </h2>
+            <p class="text-sm sm:text-base text-[#A0A3AD] leading-relaxed">
+              I'm always eager to learn, collaborate, and connect with people building scalable backend systems and
+              software applications.
+            </p>
+          </div>
+
+          <!-- Contact Channels Grid: Email, Phone, LinkedIn, GitHub, Location -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+
+            <!-- Email Card -->
+            <div
+              class="bg-[#0f1118] p-5 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center group">
+              <div class="w-11 h-11 rounded-xl bg-[#8B5CF6]/15 text-[#A78BFA] flex items-center justify-center mb-2.5">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs text-[#A0A3AD] font-mono block mb-1">Direct Email</span>
+              <a href="mailto:snehachavan0923@gmail.com"
+                class="text-xs sm:text-sm font-semibold text-white hover:text-[#38BDF8] transition-colors break-all mb-3">
+                snehachavan0923@gmail.com
+              </a>
+              <button id="copy-email-btn" type="button"
+                class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-white transition-all interactive-hover">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                <span>Copy Email</span>
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div
+              class="bg-[#0f1118] p-5 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center group">
+              <div
+                class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center mb-2.5">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs text-[#A0A3AD] font-mono block mb-1">Phone Contact</span>
+              <a href="tel:+918884793633"
+                class="text-xs sm:text-sm font-semibold text-white hover:text-emerald-300 transition-colors mb-3">
+                Call me
+              </a>
+              <a href="tel:+918884793633"
+                class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-xs font-mono text-white transition-all interactive-hover">
+                <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                <span>Call Directly</span>
+              </a>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div
+              class="bg-[#0f1118] p-5 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center group">
+              <div class="w-11 h-11 rounded-xl bg-[#0A66C2]/20 text-[#38BDF8] flex items-center justify-center mb-2.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.66 1.66 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.66 1.66 0 0 0 1.66-1.66 1.66 1.66 0 0 0-1.66-1.66Z" />
+                </svg>
+              </div>
+              <span class="text-xs text-[#A0A3AD] font-mono block mb-1">LinkedIn Network</span>
+              <span class="text-xs sm:text-sm font-semibold text-white mb-3">
+                Sneha Chavan
+              </span>
+              <a href="https://www.linkedin.com/in/snehachavan29/" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 border border-[#0A66C2]/40 text-xs font-mono text-white transition-all interactive-hover">
+                <span>View LinkedIn</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+
+            <!-- GitHub Card -->
+            <div
+              class="bg-[#0f1118] p-5 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center group">
+              <div class="w-11 h-11 rounded-xl bg-white/10 text-white flex items-center justify-center mb-2.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </div>
+              <span class="text-xs text-[#A0A3AD] font-mono block mb-1">Code Repository</span>
+              <span class="text-xs sm:text-sm font-semibold text-white mb-3">
+                @snehachavan0923
+              </span>
+              <a href="https://github.com/snehachavan0923" target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-xs font-mono text-white transition-all interactive-hover">
+                <span>View GitHub</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Direct Mail Composer -->
+          <div class="bg-[#0b0d14] p-5 sm:p-8 rounded-2xl border border-white/10 max-w-2xl mx-auto space-y-4">
+            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+              <span class="text-xs font-mono text-white font-semibold flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#8B5CF6]"></span>
+                Direct Email Composer
+              </span>
+              <span class="text-[11px] text-[#A0A3AD] font-mono">Launches your default mail client</span>
+            </div>
+
+            <div class="space-y-3">
+              <div>
+                <label for="contact-subject" class="block text-xs font-mono text-[#A0A3AD] mb-1">Subject</label>
+                <input id="contact-subject" type="text" placeholder="Project Inquiry / Job Opportunity / Collaboration"
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-[#141722] border border-white/10 text-sm text-white placeholder-[#5a5e70] focus:border-[#8B5CF6] focus:outline-none transition-colors" />
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-mono text-[#A0A3AD] mb-1">Message</label>
+                <textarea id="contact-message" rows="3" placeholder="Hi Sneha, I'd like to discuss..."
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-[#141722] border border-white/10 text-sm text-white placeholder-[#5a5e70] focus:border-[#8B5CF6] focus:outline-none transition-colors resize-none"></textarea>
+              </div>
+
+              <button id="draft-email-btn" type="button"
+                class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] hover:from-[#7C3AED] hover:to-[#4F46E5] text-white text-sm font-semibold shadow-lg shadow-purple-500/20 transition-all magnetic-cta interactive-hover">
+                <span>Launch Email in Mail Client</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-white/10 bg-[#050608] text-[#A0A3AD] text-xs font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-5">
+
+        <div class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-[#8B5CF6]"></span>
+          <span class="font-bold text-white tracking-wider">SNEHA CHAVAN</span>
+          <span>·</span>
+          <span>Full-Stack &amp; Backend Engineer</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-6">
+          <a href="#hero" class="hover:text-white transition-colors">Top ↑</a>
+          <a href="/assets/Sneha_Chavan_Resume.pdf" download="Sneha_Chavan_Resume.pdf"
+            class="hover:text-white transition-colors">Resume</a>
+          <a href="https://www.linkedin.com/in/snehachavan29/" target="_blank" rel="noopener noreferrer"
+            class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="https://github.com/snehachavan0923" target="_blank" rel="noopener noreferrer"
+            class="hover:text-white transition-colors">GitHub</a>
+          <a href="https://pgmate.in/" target="_blank" rel="noopener noreferrer"
+            class="hover:text-white transition-colors">PGMate.in</a>
+        </div>
+
+        <div>
+          &copy; <span id="current-year"></span> Sneha Chavan. All rights reserved.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODERN <dialog> FOR PROJECT DETAILS MODAL -->
+  <dialog id="project-detail-modal" closedby="any" aria-labelledby="modal-project-title">
+    <div class="p-4 sm:p-7 relative max-h-[88vh] overflow-y-auto">
+      <button id="modal-close-button" type="button"
+        class="absolute top-4 right-4 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-[#A0A3AD] hover:text-white transition-colors border border-white/10"
+        aria-label="Close project modal">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div id="modal-dynamic-content">
+        <!-- Populated dynamically by projects.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Interactive Desktop Custom Cursor Elements -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Copy Email Feedback Toast -->
+  <div id="copy-toast"
+    class="fixed bottom-6 right-4 sm:right-6 left-4 sm:left-auto z-50 bg-[#161925] border border-emerald-500/40 text-emerald-300 px-4 py-2.5 rounded-xl text-xs font-mono shadow-2xl flex items-center justify-center sm:justify-start gap-2 opacity-0 pointer-events-none translate-y-2 transition-all duration-300"
+    role="status">
+    <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+    <span>Email copied to clipboard! (snehachavan0923@gmail.com)</span>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
