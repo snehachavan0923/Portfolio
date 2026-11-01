@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.analysis.extraPaths": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages"
+    ]
 }
